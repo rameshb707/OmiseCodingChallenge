@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C60FF8F24DE644C00F3BD9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FF8E24DE644C00F3BD9F /* AppDelegate.swift */; };
+		4C60FF9124DE644C00F3BD9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FF9024DE644C00F3BD9F /* SceneDelegate.swift */; };
+		4C60FF9324DE644C00F3BD9F /* CharityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FF9224DE644C00F3BD9F /* CharityListViewController.swift */; };
+		4C60FF9624DE644C00F3BD9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60FF9424DE644C00F3BD9F /* Main.storyboard */; };
+		4C60FF9824DE645900F3BD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C60FF9724DE645900F3BD9F /* Assets.xcassets */; };
+		4C60FF9B24DE645900F3BD9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60FF9924DE645900F3BD9F /* LaunchScreen.storyboard */; };
+		4C60FFA624DE645A00F3BD9F /* CharityDonationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFA524DE645A00F3BD9F /* CharityDonationAppTests.swift */; };
+		4C60FFB124DE645A00F3BD9F /* CharityDonationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFB024DE645A00F3BD9F /* CharityDonationAppUITests.swift */; };
+		4C60FFC024DE769800F3BD9F /* CharityViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFBF24DE769800F3BD9F /* CharityViewModal.swift */; };
+		4C60FFC624DE776D00F3BD9F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFC224DE776D00F3BD9F /* NetworkManager.swift */; };
+		4C60FFC724DE776D00F3BD9F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFC324DE776D00F3BD9F /* Request.swift */; };
+		4C60FFC824DE776D00F3BD9F /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFC424DE776D00F3BD9F /* URLRequestExtension.swift */; };
+		4C60FFC924DE776D00F3BD9F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFC524DE776D00F3BD9F /* RequestType.swift */; };
+		4C60FFCC24DE7BA400F3BD9F /* Charity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFCB24DE7BA400F3BD9F /* Charity.swift */; };
+		4C60FFCE24DEEBF400F3BD9F /* CharityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFCD24DEEBF400F3BD9F /* CharityList.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C60FFA224DE645A00F3BD9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C60FF8324DE644B00F3BD9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C60FF8A24DE644B00F3BD9F;
+			remoteInfo = CharityDonationApp;
+		};
+		4C60FFAD24DE645A00F3BD9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C60FF8324DE644B00F3BD9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C60FF8A24DE644B00F3BD9F;
+			remoteInfo = CharityDonationApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C60FF8B24DE644C00F3BD9F /* CharityDonationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharityDonationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C60FF8E24DE644C00F3BD9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C60FF9024DE644C00F3BD9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4C60FF9224DE644C00F3BD9F /* CharityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityListViewController.swift; sourceTree = "<group>"; };
+		4C60FF9524DE644C00F3BD9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C60FF9724DE645900F3BD9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C60FF9A24DE645900F3BD9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C60FF9C24DE645900F3BD9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C60FFA124DE645A00F3BD9F /* CharityDonationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharityDonationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C60FFA524DE645A00F3BD9F /* CharityDonationAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityDonationAppTests.swift; sourceTree = "<group>"; };
+		4C60FFA724DE645A00F3BD9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C60FFAC24DE645A00F3BD9F /* CharityDonationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharityDonationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C60FFB024DE645A00F3BD9F /* CharityDonationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityDonationAppUITests.swift; sourceTree = "<group>"; };
+		4C60FFB224DE645A00F3BD9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C60FFBF24DE769800F3BD9F /* CharityViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityViewModal.swift; sourceTree = "<group>"; };
+		4C60FFC224DE776D00F3BD9F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4C60FFC324DE776D00F3BD9F /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		4C60FFC424DE776D00F3BD9F /* URLRequestExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		4C60FFC524DE776D00F3BD9F /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		4C60FFCB24DE7BA400F3BD9F /* Charity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charity.swift; sourceTree = "<group>"; };
+		4C60FFCD24DEEBF400F3BD9F /* CharityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityList.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C60FF8824DE644B00F3BD9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60FF9E24DE645A00F3BD9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60FFA924DE645A00F3BD9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C60FF8224DE644B00F3BD9F = {
+			isa = PBXGroup;
+			children = (
+				4C60FF8D24DE644C00F3BD9F /* CharityDonationApp */,
+				4C60FFA424DE645A00F3BD9F /* CharityDonationAppTests */,
+				4C60FFAF24DE645A00F3BD9F /* CharityDonationAppUITests */,
+				4C60FF8C24DE644C00F3BD9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C60FF8C24DE644C00F3BD9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C60FF8B24DE644C00F3BD9F /* CharityDonationApp.app */,
+				4C60FFA124DE645A00F3BD9F /* CharityDonationAppTests.xctest */,
+				4C60FFAC24DE645A00F3BD9F /* CharityDonationAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C60FF8D24DE644C00F3BD9F /* CharityDonationApp */ = {
+			isa = PBXGroup;
+			children = (
+				4C60FFCA24DE7AD100F3BD9F /* Models */,
+				4C60FFC124DE776D00F3BD9F /* Network */,
+				4C60FFBE24DE6B0D00F3BD9F /* CharityList */,
+				4C60FF8E24DE644C00F3BD9F /* AppDelegate.swift */,
+				4C60FF9024DE644C00F3BD9F /* SceneDelegate.swift */,
+				4C60FF9424DE644C00F3BD9F /* Main.storyboard */,
+				4C60FF9724DE645900F3BD9F /* Assets.xcassets */,
+				4C60FF9924DE645900F3BD9F /* LaunchScreen.storyboard */,
+				4C60FF9C24DE645900F3BD9F /* Info.plist */,
+			);
+			path = CharityDonationApp;
+			sourceTree = "<group>";
+		};
+		4C60FFA424DE645A00F3BD9F /* CharityDonationAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C60FFA524DE645A00F3BD9F /* CharityDonationAppTests.swift */,
+				4C60FFA724DE645A00F3BD9F /* Info.plist */,
+			);
+			path = CharityDonationAppTests;
+			sourceTree = "<group>";
+		};
+		4C60FFAF24DE645A00F3BD9F /* CharityDonationAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C60FFB024DE645A00F3BD9F /* CharityDonationAppUITests.swift */,
+				4C60FFB224DE645A00F3BD9F /* Info.plist */,
+			);
+			path = CharityDonationAppUITests;
+			sourceTree = "<group>";
+		};
+		4C60FFBE24DE6B0D00F3BD9F /* CharityList */ = {
+			isa = PBXGroup;
+			children = (
+				4C60FF9224DE644C00F3BD9F /* CharityListViewController.swift */,
+				4C60FFBF24DE769800F3BD9F /* CharityViewModal.swift */,
+			);
+			path = CharityList;
+			sourceTree = "<group>";
+		};
+		4C60FFC124DE776D00F3BD9F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4C60FFC224DE776D00F3BD9F /* NetworkManager.swift */,
+				4C60FFC324DE776D00F3BD9F /* Request.swift */,
+				4C60FFC424DE776D00F3BD9F /* URLRequestExtension.swift */,
+				4C60FFC524DE776D00F3BD9F /* RequestType.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4C60FFCA24DE7AD100F3BD9F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C60FFCB24DE7BA400F3BD9F /* Charity.swift */,
+				4C60FFCD24DEEBF400F3BD9F /* CharityList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C60FF8A24DE644B00F3BD9F /* CharityDonationApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C60FFB524DE645A00F3BD9F /* Build configuration list for PBXNativeTarget "CharityDonationApp" */;
+			buildPhases = (
+				4C60FF8724DE644B00F3BD9F /* Sources */,
+				4C60FF8824DE644B00F3BD9F /* Frameworks */,
+				4C60FF8924DE644B00F3BD9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CharityDonationApp;
+			productName = CharityDonationApp;
+			productReference = 4C60FF8B24DE644C00F3BD9F /* CharityDonationApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C60FFA024DE645A00F3BD9F /* CharityDonationAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C60FFB824DE645A00F3BD9F /* Build configuration list for PBXNativeTarget "CharityDonationAppTests" */;
+			buildPhases = (
+				4C60FF9D24DE645A00F3BD9F /* Sources */,
+				4C60FF9E24DE645A00F3BD9F /* Frameworks */,
+				4C60FF9F24DE645A00F3BD9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C60FFA324DE645A00F3BD9F /* PBXTargetDependency */,
+			);
+			name = CharityDonationAppTests;
+			productName = CharityDonationAppTests;
+			productReference = 4C60FFA124DE645A00F3BD9F /* CharityDonationAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C60FFAB24DE645A00F3BD9F /* CharityDonationAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C60FFBB24DE645A00F3BD9F /* Build configuration list for PBXNativeTarget "CharityDonationAppUITests" */;
+			buildPhases = (
+				4C60FFA824DE645A00F3BD9F /* Sources */,
+				4C60FFA924DE645A00F3BD9F /* Frameworks */,
+				4C60FFAA24DE645A00F3BD9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C60FFAE24DE645A00F3BD9F /* PBXTargetDependency */,
+			);
+			name = CharityDonationAppUITests;
+			productName = CharityDonationAppUITests;
+			productReference = 4C60FFAC24DE645A00F3BD9F /* CharityDonationAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C60FF8324DE644B00F3BD9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Ramesh B";
+				TargetAttributes = {
+					4C60FF8A24DE644B00F3BD9F = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					4C60FFA024DE645A00F3BD9F = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 4C60FF8A24DE644B00F3BD9F;
+					};
+					4C60FFAB24DE645A00F3BD9F = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 4C60FF8A24DE644B00F3BD9F;
+					};
+				};
+			};
+			buildConfigurationList = 4C60FF8624DE644B00F3BD9F /* Build configuration list for PBXProject "CharityDonationApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C60FF8224DE644B00F3BD9F;
+			productRefGroup = 4C60FF8C24DE644C00F3BD9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C60FF8A24DE644B00F3BD9F /* CharityDonationApp */,
+				4C60FFA024DE645A00F3BD9F /* CharityDonationAppTests */,
+				4C60FFAB24DE645A00F3BD9F /* CharityDonationAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C60FF8924DE644B00F3BD9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60FF9B24DE645900F3BD9F /* LaunchScreen.storyboard in Resources */,
+				4C60FF9824DE645900F3BD9F /* Assets.xcassets in Resources */,
+				4C60FF9624DE644C00F3BD9F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60FF9F24DE645A00F3BD9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60FFAA24DE645A00F3BD9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C60FF8724DE644B00F3BD9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60FF9324DE644C00F3BD9F /* CharityListViewController.swift in Sources */,
+				4C60FFC724DE776D00F3BD9F /* Request.swift in Sources */,
+				4C60FFCE24DEEBF400F3BD9F /* CharityList.swift in Sources */,
+				4C60FFC024DE769800F3BD9F /* CharityViewModal.swift in Sources */,
+				4C60FFC624DE776D00F3BD9F /* NetworkManager.swift in Sources */,
+				4C60FFCC24DE7BA400F3BD9F /* Charity.swift in Sources */,
+				4C60FFC824DE776D00F3BD9F /* URLRequestExtension.swift in Sources */,
+				4C60FF8F24DE644C00F3BD9F /* AppDelegate.swift in Sources */,
+				4C60FF9124DE644C00F3BD9F /* SceneDelegate.swift in Sources */,
+				4C60FFC924DE776D00F3BD9F /* RequestType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60FF9D24DE645A00F3BD9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60FFA624DE645A00F3BD9F /* CharityDonationAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60FFA824DE645A00F3BD9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60FFB124DE645A00F3BD9F /* CharityDonationAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C60FFA324DE645A00F3BD9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C60FF8A24DE644B00F3BD9F /* CharityDonationApp */;
+			targetProxy = 4C60FFA224DE645A00F3BD9F /* PBXContainerItemProxy */;
+		};
+		4C60FFAE24DE645A00F3BD9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C60FF8A24DE644B00F3BD9F /* CharityDonationApp */;
+			targetProxy = 4C60FFAD24DE645A00F3BD9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C60FF9424DE644C00F3BD9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C60FF9524DE644C00F3BD9F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4C60FF9924DE645900F3BD9F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C60FF9A24DE645900F3BD9F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C60FFB324DE645A00F3BD9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C60FFB424DE645A00F3BD9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C60FFB624DE645A00F3BD9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CharityDonationApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.restaurant.CharityDonationApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C60FFB724DE645A00F3BD9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CharityDonationApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.restaurant.CharityDonationApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C60FFB924DE645A00F3BD9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CharityDonationAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.restaurant.CharityDonationAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CharityDonationApp.app/CharityDonationApp";
+			};
+			name = Debug;
+		};
+		4C60FFBA24DE645A00F3BD9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CharityDonationAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.restaurant.CharityDonationAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CharityDonationApp.app/CharityDonationApp";
+			};
+			name = Release;
+		};
+		4C60FFBC24DE645A00F3BD9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CharityDonationAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.restaurant.CharityDonationAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CharityDonationApp;
+			};
+			name = Debug;
+		};
+		4C60FFBD24DE645A00F3BD9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CharityDonationAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.restaurant.CharityDonationAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CharityDonationApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C60FF8624DE644B00F3BD9F /* Build configuration list for PBXProject "CharityDonationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60FFB324DE645A00F3BD9F /* Debug */,
+				4C60FFB424DE645A00F3BD9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C60FFB524DE645A00F3BD9F /* Build configuration list for PBXNativeTarget "CharityDonationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60FFB624DE645A00F3BD9F /* Debug */,
+				4C60FFB724DE645A00F3BD9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C60FFB824DE645A00F3BD9F /* Build configuration list for PBXNativeTarget "CharityDonationAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60FFB924DE645A00F3BD9F /* Debug */,
+				4C60FFBA24DE645A00F3BD9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C60FFBB24DE645A00F3BD9F /* Build configuration list for PBXNativeTarget "CharityDonationAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60FFBC24DE645A00F3BD9F /* Debug */,
+				4C60FFBD24DE645A00F3BD9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C60FF8324DE644B00F3BD9F /* Project object */;
+}
