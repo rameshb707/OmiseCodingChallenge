@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharityTableViewCell" rowHeight="101" id="KGk-i7-Jjw" customClass="CharityTableViewCell" customModule="CharityDonationApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="398" height="101"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IQY-f2-wbI">
+                        <rect key="frame" x="10" y="10" width="105" height="81"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKN-bE-NHN">
+                        <rect key="frame" x="123" y="8" width="267" height="85"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="DKN-bE-NHN" secondAttribute="bottom" constant="8" id="1Bd-3I-SJm"/>
+                    <constraint firstAttribute="bottom" secondItem="IQY-f2-wbI" secondAttribute="bottom" constant="10" id="1Fw-Pf-XEk"/>
+                    <constraint firstAttribute="trailing" secondItem="DKN-bE-NHN" secondAttribute="trailing" constant="8" id="7lT-5c-muY"/>
+                    <constraint firstItem="IQY-f2-wbI" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.263819" id="JCQ-yV-r3d"/>
+                    <constraint firstItem="DKN-bE-NHN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="bMV-DJ-i33"/>
+                    <constraint firstItem="IQY-f2-wbI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="exL-pc-nwT"/>
+                    <constraint firstItem="DKN-bE-NHN" firstAttribute="leading" secondItem="IQY-f2-wbI" secondAttribute="trailing" constant="8" id="suL-j3-53N"/>
+                    <constraint firstItem="IQY-f2-wbI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="w1h-3E-RGg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="charityNameLabel" destination="DKN-bE-NHN" id="DmZ-sJ-i0v"/>
+                <outlet property="charitylogoImageView" destination="IQY-f2-wbI" id="3cI-aH-oXa"/>
+            </connections>
+            <point key="canvasLocation" x="194.20289855072465" y="151.67410714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

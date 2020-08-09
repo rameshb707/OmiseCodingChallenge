@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4B86A124E030E700A63B27 /* CharityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B86A024E030E700A63B27 /* CharityTableViewCell.swift */; };
+		4C4B86A324E030EF00A63B27 /* CharityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4B86A224E030EF00A63B27 /* CharityTableViewCell.xib */; };
+		4C4B86A524E030FB00A63B27 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B86A424E030FB00A63B27 /* Constants.swift */; };
 		4C60FF8F24DE644C00F3BD9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FF8E24DE644C00F3BD9F /* AppDelegate.swift */; };
 		4C60FF9124DE644C00F3BD9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FF9024DE644C00F3BD9F /* SceneDelegate.swift */; };
 		4C60FF9324DE644C00F3BD9F /* CharityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FF9224DE644C00F3BD9F /* CharityListViewController.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C4B86A024E030E700A63B27 /* CharityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharityTableViewCell.swift; sourceTree = "<group>"; };
+		4C4B86A224E030EF00A63B27 /* CharityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharityTableViewCell.xib; sourceTree = "<group>"; };
+		4C4B86A424E030FB00A63B27 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4C60FF8B24DE644C00F3BD9F /* CharityDonationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharityDonationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60FF8E24DE644C00F3BD9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C60FF9024DE644C00F3BD9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C4B869D24E030B000A63B27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C4B86A224E030EF00A63B27 /* CharityTableViewCell.xib */,
+				4C4B86A024E030E700A63B27 /* CharityTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C4B869E24E030C600A63B27 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C60FF9224DE644C00F3BD9F /* CharityListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4C4B869F24E030D200A63B27 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				4C60FFBF24DE769800F3BD9F /* CharityViewModal.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
 		4C60FF8224DE644B00F3BD9F = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +144,7 @@
 		4C60FF8D24DE644C00F3BD9F /* CharityDonationApp */ = {
 			isa = PBXGroup;
 			children = (
+				4C4B86A424E030FB00A63B27 /* Constants.swift */,
 				4C60FFCA24DE7AD100F3BD9F /* Models */,
 				4C60FFC124DE776D00F3BD9F /* Network */,
 				4C60FFBE24DE6B0D00F3BD9F /* CharityList */,
@@ -147,8 +179,9 @@
 		4C60FFBE24DE6B0D00F3BD9F /* CharityList */ = {
 			isa = PBXGroup;
 			children = (
-				4C60FF9224DE644C00F3BD9F /* CharityListViewController.swift */,
-				4C60FFBF24DE769800F3BD9F /* CharityViewModal.swift */,
+				4C4B869F24E030D200A63B27 /* ViewModal */,
+				4C4B869E24E030C600A63B27 /* Controller */,
+				4C4B869D24E030B000A63B27 /* View */,
 			);
 			path = CharityList;
 			sourceTree = "<group>";
@@ -277,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4B86A324E030EF00A63B27 /* CharityTableViewCell.xib in Resources */,
 				4C60FF9B24DE645900F3BD9F /* LaunchScreen.storyboard in Resources */,
 				4C60FF9824DE645900F3BD9F /* Assets.xcassets in Resources */,
 				4C60FF9624DE644C00F3BD9F /* Main.storyboard in Resources */,
@@ -308,12 +342,14 @@
 				4C60FFC724DE776D00F3BD9F /* Request.swift in Sources */,
 				4C60FFCE24DEEBF400F3BD9F /* CharityList.swift in Sources */,
 				4C60FFC024DE769800F3BD9F /* CharityViewModal.swift in Sources */,
+				4C4B86A124E030E700A63B27 /* CharityTableViewCell.swift in Sources */,
 				4C60FFC624DE776D00F3BD9F /* NetworkManager.swift in Sources */,
 				4C60FFCC24DE7BA400F3BD9F /* Charity.swift in Sources */,
 				4C60FFC824DE776D00F3BD9F /* URLRequestExtension.swift in Sources */,
 				4C60FF8F24DE644C00F3BD9F /* AppDelegate.swift in Sources */,
 				4C60FF9124DE644C00F3BD9F /* SceneDelegate.swift in Sources */,
 				4C60FFC924DE776D00F3BD9F /* RequestType.swift in Sources */,
+				4C4B86A524E030FB00A63B27 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

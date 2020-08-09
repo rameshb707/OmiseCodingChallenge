@@ -21,7 +21,17 @@ protocol NetworkRequest: class {
        - Request: The network request that needs to be executed
        - completionHandler: A callback that is called on the completion of API call
     */
-    func send<T: Codable>(modelType: T.Type,_ request: Request, _ completion: @escaping (resultCompletion) -> Void) 
+    func send<T: Codable>(modelType: T.Type,_ request: Request, _ completion: @escaping (resultCompletion) -> Void)
+    
+    /**
+     Fetches the Image data from the URL
+
+     - Parameters:
+        - url: Logo URL
+        - completion: A callback that is called on the completion of API call
+     */
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ())
+
 }
 
 
@@ -57,5 +67,16 @@ class NetworkManager: NetworkRequest {
             }
         })
         task.resume()
+    }
+    
+    /**
+     Fetches the Image data from the URL
+
+     - Parameters:
+        - url: Logo URL
+        - completion: A callback that is called on the completion of API call
+     */
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        session.dataTask(with: url, completionHandler: completion).resume()
     }
 }
