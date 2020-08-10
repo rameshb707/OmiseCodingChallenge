@@ -10,6 +10,7 @@ import UIKit
 
 class CharityListViewController: UIViewController {
 
+
     // MARK:- Outlets
     @IBOutlet weak var charityListTableView: UITableView!
     

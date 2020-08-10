@@ -1,0 +1,16 @@
+PODS:
+  - omise-ios (1.0.2)
+
+DEPENDENCIES:
+  - omise-ios
+
+SPEC REPOS:
+  trunk:
+    - omise-ios
+
+SPEC CHECKSUMS:
+  omise-ios: 619ea60eba825b7a0e96c7f4870a87b6cef6e124
+
+PODFILE CHECKSUM: 9cf6855aef3d0dfe3a72305feb4e5d25778c2d87
+
+COCOAPODS: 1.9.3

@@ -54,6 +54,9 @@ class NetworkManager: NetworkRequest {
         let dataRequest = URLRequest(request: request)
         
         let task = session.dataTask(with: dataRequest, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) -> Void in
+            if let httpResponse = response as? HTTPURLResponse {
+                print("statusCode: \(httpResponse.statusCode)")
+            }
             if let err = error {
                 completion((nil, nil, err))
                 return

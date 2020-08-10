@@ -1,0 +1,6 @@
+framework module omise_ios {
+  umbrella header "omise-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}
