@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="foB-Hm-M24">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fN9-P5-cgB"/>
+                        <segue destination="foB-Hm-M24" kind="relationship" relationship="rootViewController" id="Hte-QP-2Mr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kge-bI-DNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -26,13 +26,13 @@
         <!--Charity List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CharityListViewController" customModule="CharityDonationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharityListViewController" id="BYZ-38-t0r" customClass="CharityListViewController" customModule="CharityDonationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rFE-h4-bMB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="lkd-ln-g4r"/>
@@ -56,62 +56,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-194.20289855072465" y="61.607142857142854"/>
+            <point key="canvasLocation" x="-1820" y="62"/>
         </scene>
         <!--Charity Donation View Controller-->
         <scene sceneID="kQf-zw-CUt">
             <objects>
-                <viewController id="foB-Hm-M24" customClass="CharityDonationViewController" customModule="CharityDonationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharityDonationViewController" id="foB-Hm-M24" customClass="CharityDonationViewController" customModule="CharityDonationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XfJ-pw-7m7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-cd-bQx" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="74" width="374" height="34"/>
+                                <rect key="frame" x="20" y="118" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XXXX XXXX XXXX XXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbZ-H6-O0E" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="132" width="374" height="34"/>
+                                <rect key="frame" x="20" y="176" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiery Month:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejy-Yy-WET">
-                                <rect key="frame" x="20" y="186" width="115" height="21"/>
+                                <rect key="frame" x="20" y="230" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount in THB" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-Ey-evL" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="50" y="282" width="344" height="34"/>
+                                <rect key="frame" x="50" y="326" width="344" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="฿" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7M-Gt-mI3">
-                                <rect key="frame" x="8" y="287" width="42" height="24"/>
+                                <rect key="frame" x="8" y="331" width="42" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4w3-xQ-OQn" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="341.5" y="179" width="52.5" height="34"/>
+                                <rect key="frame" x="341.5" y="223" width="52.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-cK-PbS" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="326" y="228" width="68" height="34"/>
+                                <rect key="frame" x="326" y="272" width="68" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH7-Te-Z8f">
-                                <rect key="frame" x="20" y="343" width="374" height="30"/>
+                                <rect key="frame" x="20" y="387" width="374" height="30"/>
                                 <state key="normal" title="Donate"/>
                                 <connections>
                                     <action selector="donate:" destination="foB-Hm-M24" eventType="touchUpInside" id="yLV-rP-a0x"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiery Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfq-BU-n1m">
-                                <rect key="frame" x="20" y="234.5" width="100" height="21"/>
+                                <rect key="frame" x="20" y="278.5" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -145,6 +145,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wGC-v5-pGa"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MG0-h9-uwT">
+                        <barButtonItem key="rightBarButtonItem" title="Dismiss" id="V0j-xU-5hx">
+                            <connections>
+                                <action selector="onTapDismiss:" destination="foB-Hm-M24" id="ROK-MO-rp8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardHolderNameTextField" destination="cnb-cd-bQx" id="pUr-zc-SCt"/>
                         <outlet property="cardNumberTextField" destination="ZbZ-H6-O0E" id="UAi-0j-rl3"/>
@@ -155,7 +162,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1JD-TY-iND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518.84057971014499" y="61.607142857142854"/>
+            <point key="canvasLocation" x="-293" y="62"/>
+        </scene>
+        <!--Successfull Transaction View Controller-->
+        <scene sceneID="uCA-gp-TnQ">
+            <objects>
+                <viewController storyboardIdentifier="SuccessfullTransactionViewController" id="ctE-Lb-hSP" customClass="SuccessfullTransactionViewController" customModule="CharityDonationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BGR-ge-jx9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction is Successfull. Thanks for the donation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x7-fY-h9F">
+                                <rect key="frame" x="40" y="573" width="334" height="42.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TransactionSuccess" translatesAutoresizingMaskIntoConstraints="NO" id="xL9-es-blY">
+                                <rect key="frame" x="107" y="353" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="bvn-rE-BVa"/>
+                                    <constraint firstAttribute="height" constant="200" id="rvZ-Jl-vPj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKQ-5i-tEU">
+                                <rect key="frame" x="40" y="800" width="334" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZRE-ed-Uov"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapOk:" destination="ctE-Lb-hSP" eventType="touchUpInside" id="bnb-A2-x9V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9J8-AU-XGF" firstAttribute="bottom" secondItem="pKQ-5i-tEU" secondAttribute="bottom" constant="12" id="7XI-XC-3Yf"/>
+                            <constraint firstItem="4x7-fY-h9F" firstAttribute="leading" secondItem="9J8-AU-XGF" secondAttribute="leading" constant="40" id="HIx-jV-LXa"/>
+                            <constraint firstItem="4x7-fY-h9F" firstAttribute="top" secondItem="xL9-es-blY" secondAttribute="bottom" constant="20" id="NTP-Qd-gad"/>
+                            <constraint firstItem="xL9-es-blY" firstAttribute="centerX" secondItem="9J8-AU-XGF" secondAttribute="centerX" id="QAA-wq-Ozo"/>
+                            <constraint firstItem="pKQ-5i-tEU" firstAttribute="leading" secondItem="9J8-AU-XGF" secondAttribute="leading" constant="40" id="RaA-0f-bPr"/>
+                            <constraint firstItem="4x7-fY-h9F" firstAttribute="centerX" secondItem="xL9-es-blY" secondAttribute="centerX" id="UsW-6O-r1a"/>
+                            <constraint firstItem="9J8-AU-XGF" firstAttribute="trailing" secondItem="4x7-fY-h9F" secondAttribute="trailing" constant="40" id="ZXi-GM-00r"/>
+                            <constraint firstItem="xL9-es-blY" firstAttribute="centerY" secondItem="9J8-AU-XGF" secondAttribute="centerY" id="hUs-tS-mLB"/>
+                            <constraint firstItem="9J8-AU-XGF" firstAttribute="trailing" secondItem="pKQ-5i-tEU" secondAttribute="trailing" constant="40" id="x4B-Fr-yKl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9J8-AU-XGF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pqg-Qw-dG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="522" y="62"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TransactionSuccess" width="225" height="225"/>
+    </resources>
 </document>

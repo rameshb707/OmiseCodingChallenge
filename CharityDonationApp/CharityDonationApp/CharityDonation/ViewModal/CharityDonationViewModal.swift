@@ -18,7 +18,34 @@ struct CardNumberModel {
 }
 
 protocol CharityDonationViewModalDelegate: AnyObject {
+    /**
+     Calls on Successfull of donation this delgate function navigates to success screen
+     */
     func donationSuccessfull()
+    
+    /**
+     Calls on when response success key is false
+     */
+    func insufficientBalanceFailed()
+    
+    /**
+     Calls on error occured during performing the donation
+     
+      - Parameters:
+        - title: Error title
+        - description: Error description
+     */
+    func donationError(_ title: String, description message: String)
+    
+    /**
+     Calls when user has entered invalid amount
+     */
+    func enterValidAmount()
+    
+    /**
+      Calls when internet connection is failed
+    */
+    func networkConnectionError()
 }
 
 /// The interface which helps to fetch the token form the given card details
@@ -43,8 +70,8 @@ class CharityDonationViewModal: NSObject, OmiseTokenInterface {
     /// Global property uses to make network call
     private lazy var networkManager  = NetworkManager()
     
-    /// Donation amount 
-    private var donationAmount: String!
+    /// Donation amount
+    private var donationAmount: Int!
     
     /// Custom Initializer to confirm the delegate who is using the viewmodal to get neccessary infromation
     init(delegate: CharityDonationViewModalDelegate) {
@@ -58,9 +85,16 @@ class CharityDonationViewModal: NSObject, OmiseTokenInterface {
         - cardDetails: Required details to fetch the token ID
      */
     func donateToCharity(cardDetails details: CardNumberModel) {
-        self.donationAmount = details.donationAmount
-        self.getToken(details.cardHolderName, cardNumber: details.cardNumber, expiryMonth: details.expiryMonth, expiryYear: details.expiryYear)
-        
+        guard let amount = Int(details.donationAmount), amount > 0 else {
+            self.delegate?.enterValidAmount()
+            return
+        }
+        self.donationAmount = amount
+        if let reachable = NetworkReachability.sharedInstance?.isReachable, reachable {
+            self.getToken(details.cardHolderName, cardNumber: details.cardNumber, expiryMonth: details.expiryMonth, expiryYear: details.expiryYear)
+        } else {
+            self.delegate?.networkConnectionError()
+        }
     }
     
     /**
@@ -71,10 +105,16 @@ class CharityDonationViewModal: NSObject, OmiseTokenInterface {
         - tokenID: A valid token ID fetched using omise
      */
     private func callDonateAPI(cardHolder name: String, _ tokenID: String) {
-        let donationRequest = Request(endPoint: "/donations", parameters: APIParams.url(["nme": name, "token": tokenID, "amount": self.donationAmount]), httpMethod: .POST)
-        networkManager.send(modelType: DonationResult.self, donationRequest) { [weak self] (donationResult, response, error) in
-            if let success = (donationResult as? DonationResult)?.success, success {
-                self?.delegate?.donationSuccessfull()
+        let donationRequest = Request(endPoint: CHARITY_DONATION_END_POINT, parameters: APIParams.url(["nme": name, "token": tokenID, "amount": self.donationAmount as Any]), httpMethod: .POST)
+        networkManager.send(modelType: DonationResult.self, donationRequest) { [weak self] (donationResult, error) in
+            DispatchQueue.main.async {
+                if let chartyDonationError = error {
+                    self?.delegate?.donationError(chartyDonationError.title, description: chartyDonationError.description)
+                } else {
+                    if let success = (donationResult as? DonationResult)?.success {
+                        success == true ? self?.delegate?.donationSuccessfull() : self?.delegate?.insufficientBalanceFailed()
+                    }
+                }
             }
         }
     }
@@ -113,6 +153,6 @@ extension CharityDonationViewModal: OmiseRequestDelegate {
     }
     
     func omise(onFailed error: Error!) {
-        
+        self.delegate?.donationError(INVALID_CAR_DETAILS, description: INVALID_CAR_DETAILS_DESCRIPTION)
     }
 }

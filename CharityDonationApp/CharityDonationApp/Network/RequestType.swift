@@ -26,7 +26,7 @@ extension RequestType {
 }
 
 enum APIParams {
-    case url([String:String])
+    case url([String:Any])
 }
 
 extension APIParams {

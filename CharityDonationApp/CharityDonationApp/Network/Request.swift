@@ -29,7 +29,7 @@ struct Request: EndPoint {
     
     /// Base URL from which the server will be triggered
     private var baseURL: String {
-        return Charity_Donation_BaseURL
+        return ODManager.sharedInstance.baseURL
     }
     
     /// Final URL to which the request has to be hit with necessary request body

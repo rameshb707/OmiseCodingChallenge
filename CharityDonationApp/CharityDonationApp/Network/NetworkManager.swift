@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias resultCompletion = (T: Codable?, URLResponse?, Error?)
+typealias resultCompletion = (T: Codable?, CharityDonationError?)
 
 /// All the network managers should conform to this Protocol
 protocol NetworkRequest: class {
@@ -55,19 +55,21 @@ class NetworkManager: NetworkRequest {
         
         let task = session.dataTask(with: dataRequest, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) -> Void in
             if let httpResponse = response as? HTTPURLResponse {
-                print("statusCode: \(httpResponse.statusCode)")
+                let result = Validation.containsValidResponseInStatus(responseStaus: httpResponse)
+                switch result {
+                case .success:
+                    guard let productData = data else { completion((nil, nil)); return; }
+                    do {
+                        let value = try JSONDecoder().decode(T.self, from: productData)
+                        completion((value, nil))
+                    } catch {
+                        completion((nil, CharityDonationError.parseError("")))
+                    }
+                case .error(let error):
+                    completion((nil, error))
+                }
             }
-            if let err = error {
-                completion((nil, nil, err))
-                return
-            }
-            guard let productData = data else { completion((nil, nil, nil)); return; }
-            do {
-                let value = try JSONDecoder().decode(T.self, from: productData)
-                completion((value, nil, nil))
-            } catch let err {
-                completion((nil,nil, err))
-            }
+            
         })
         task.resume()
     }

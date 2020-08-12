@@ -8,9 +8,28 @@
 
 import Foundation
 
-
 protocol CharityViewModalDelegate: AnyObject {
+    /**
+     Calls when it fetchs the Charity list successfully
+     
+      - Parameters:
+        - list: List of charity model
+     */
     func charityList(_ list: [Charity])
+    
+    /**
+      Calls when internet connection is failed
+    */
+    func networkConnectionError()
+    
+    /**
+     Calls on error occured during performing to fetch charity list
+     
+      - Parameters:
+        - title: Error title
+        - description: Error description
+     */
+    func charityListError(_ title: String, description message: String)
 }
 
 class CharityViewModal {
@@ -18,7 +37,7 @@ class CharityViewModal {
     /// Delegate
     weak var delegate: CharityViewModalDelegate?
     
-    /// Global property uses to make network call
+    /// Global property use to make network call
     private lazy var networkManager  = NetworkManager()
     
     /// Custom Initializer to confirm the delegate who is using the viewmodal to get neccessary infromation
@@ -31,12 +50,21 @@ class CharityViewModal {
      On Success it delgaates back to view to populate
     */
     func getCharityList() {
-        let request = Request(endPoint: "/charities", parameters: nil, httpMethod: .GET)
-        networkManager.send(modelType: CharityList.self, request) { (charityList, response, error) in
-            DispatchQueue.main.async {
-                if let list = charityList {
-                    self.delegate?.charityList((list as? CharityList)?.data ?? [])
+        if let reachable = NetworkReachability.sharedInstance?.isReachable, reachable {
+            let request = Request(endPoint: CHARITYLIST_END_POINT, parameters: nil, httpMethod: .GET)
+            networkManager.send(modelType: CharityList.self, request) {[weak self] (charityList, error) in
+                DispatchQueue.main.async {
+                    if let charityListError = error {
+                        self?.delegate?.charityListError(charityListError.title, description: charityListError.description)
+                    }
+                    if let list = charityList {
+                        self?.delegate?.charityList((list as? CharityList)?.data ?? [])
+                    }
                 }
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.delegate?.networkConnectionError()
             }
         }
     }
@@ -49,13 +77,15 @@ class CharityViewModal {
        - completion: A callback that is called on the completion of API call
     */
     func getImage(from url: String,_ completion: @escaping (Data) -> Void){
-        if let imageURL = URL(string: url) {
-            networkManager.getData(from: imageURL) { data, response, error in
-                guard let image = data, error == nil else {
-                    return
-                }
-                DispatchQueue.main.async() {
-                    completion(image)
+        DispatchQueue.global(qos: .background).async {
+            if let imageURL = URL(string: url) {
+                self.networkManager.getData(from: imageURL) { data, response, error in
+                    guard let image = data, error == nil else {
+                        return
+                    }
+                    DispatchQueue.main.async() {
+                        completion(image)
+                    }
                 }
             }
         }
