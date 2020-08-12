@@ -22,4 +22,24 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    /**
+       Common UIActivityIndicatorView view to present on any viewcontroller
+
+        - Parameters:
+            - uiView: the view on which UIActivityIndicatorView has to show
+    */
+    func showActivityIndicatory(uiView: UIView) ->  UIActivityIndicatorView {
+        let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+        activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0);
+        activityIndicator.center = uiView.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .large
+        activityIndicator.color = UIColor.systemGreen
+        uiView.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        return activityIndicator
+    }
 }
+
+

@@ -24,6 +24,8 @@ class CharityDonationViewController: UIViewController,UITextFieldDelegate, TextD
     // MARK: Properties
     var viewModal: CharityDonationViewModal?
     
+    var activityIndicator: UIActivityIndicatorView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +34,10 @@ class CharityDonationViewController: UIViewController,UITextFieldDelegate, TextD
         
         /// ViewModal Object with CharityDonationViewController confirming through initializer
         viewModal = CharityDonationViewModal(delegate: self)
+        
+        /// Adds activity indicator on doing paymnet
+        activityIndicator = self.showActivityIndicatory(uiView: self.view)
+        activityIndicator?.stopAnimating()
     }
     
     /**
@@ -62,11 +68,16 @@ class CharityDonationViewController: UIViewController,UITextFieldDelegate, TextD
     
     // MARK: Actions
     @IBAction func donate(_ sender: Any) {
-        
-        let cardModal = CardNumberModel(cardHolderName: cardHolderNameTextField.getText(bWithOutFormat: false), cardNumber: cardNumberTextField.getText(), expiryMonth: expiryMonthTextField.getText(), expiryYear: expiryYearTextField.getText(), donationAmount: donationAmountTextField.getText())
-        
-        /// Donate the amount
-        viewModal?.donateToCharity(cardDetails: cardModal)
+        if (cardHolderNameTextField.getText(bWithOutFormat: false).count > 0) || (cardNumberTextField.getText().count == CARD_NUMBER_COUNT) || (expiryMonthTextField.getText().count > 0)  || (expiryYearTextField.getText().count == CARD_EXPIRY_YEAR) || (donationAmountTextField.getText().count > 0 ) {
+            activityIndicator?.startAnimating()
+
+            let cardModal = CardNumberModel(cardHolderName: cardHolderNameTextField.getText(bWithOutFormat: false), cardNumber: cardNumberTextField.getText(), expiryMonth: expiryMonthTextField.getText(), expiryYear: expiryYearTextField.getText(), donationAmount: donationAmountTextField.getText())
+            
+            /// Donate the amount
+            viewModal?.donateToCharity(cardDetails: cardModal)
+        } else {
+            self.alertView(INVALID_CARD_DETAILS, description: INVALID_CARD_DETAILS_DESCRIPTION)
+        }
     }
     
     @IBAction func onTapDismiss(_ sender: Any) {
@@ -82,22 +93,27 @@ extension CharityDonationViewController: CharityDonationViewModalDelegate {
     }
     
     func donationError(_ title: String, description message: String) {
+        activityIndicator?.stopAnimating()
         self.alertView(title, description: message)
     }
     
     func networkConnectionError() {
+        activityIndicator?.stopAnimating()
         self.alertView(NETWORK_CONNECTION_FAIL_TITLE, description: NETWORK_CONNECTION_FAIL_DESCRIPTION)
     }
     
     func enterValidAmount() {
+        activityIndicator?.stopAnimating()
         self.alertView(INVALID_AMOUNT, description: INVALID_AMOUNT_DESCRIPTION)
     }
     
     func insufficientBalanceFailed() {
+        activityIndicator?.stopAnimating()
         self.alertView(INSUFFICIENT_BALANCE, description: INSUFFICIENT_BALANCE_DESCRIPTION)
     }
     
     private func navigateSuccessfullTransactionScreen() {
+        activityIndicator?.stopAnimating()
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         var successfullTransactionVC: SuccessfullTransactionViewController!
         if #available(iOS 13.0, *) {

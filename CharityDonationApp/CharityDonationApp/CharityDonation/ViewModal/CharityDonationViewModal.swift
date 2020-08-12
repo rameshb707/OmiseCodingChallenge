@@ -153,6 +153,6 @@ extension CharityDonationViewModal: OmiseRequestDelegate {
     }
     
     func omise(onFailed error: Error!) {
-        self.delegate?.donationError(INVALID_CAR_DETAILS, description: INVALID_CAR_DETAILS_DESCRIPTION)
+        self.delegate?.donationError(INVALID_CARD_DETAILS, description: INVALID_CARD_DETAILS_DESCRIPTION)
     }
 }

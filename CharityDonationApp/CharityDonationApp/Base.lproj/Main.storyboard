@@ -32,18 +32,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rFE-h4-bMB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="lkd-ln-g4r"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zIv-j6-Zml"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charity List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03a-bQ-222">
+                                <rect key="frame" x="148" y="52" width="118" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rFE-h4-bMB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="468-mY-sux"/>
-                            <constraint firstItem="rFE-h4-bMB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dAU-T6-SPP"/>
+                            <constraint firstItem="03a-bQ-222" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AKJ-b8-I2v"/>
+                            <constraint firstItem="03a-bQ-222" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="PfM-RO-zXX"/>
+                            <constraint firstItem="rFE-h4-bMB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="dAU-T6-SPP"/>
                             <constraint firstItem="rFE-h4-bMB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mNA-Mc-LwG"/>
                             <constraint firstItem="rFE-h4-bMB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ujD-P9-0Iy"/>
                         </constraints>
@@ -56,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1820" y="62"/>
+            <point key="canvasLocation" x="-1820.289855072464" y="61.607142857142854"/>
         </scene>
         <!--Charity Donation View Controller-->
         <scene sceneID="kQf-zw-CUt">
@@ -66,82 +74,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-cd-bQx" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="118" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XXXX XXXX XXXX XXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbZ-H6-O0E" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="176" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiery Month:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejy-Yy-WET">
-                                <rect key="frame" x="20" y="230" width="115" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount in THB" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-Ey-evL" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="50" y="326" width="344" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="฿" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7M-Gt-mI3">
-                                <rect key="frame" x="8" y="331" width="42" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4w3-xQ-OQn" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="341.5" y="223" width="52.5" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-cK-PbS" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
-                                <rect key="frame" x="326" y="272" width="68" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH7-Te-Z8f">
-                                <rect key="frame" x="20" y="387" width="374" height="30"/>
-                                <state key="normal" title="Donate"/>
-                                <connections>
-                                    <action selector="donate:" destination="foB-Hm-M24" eventType="touchUpInside" id="yLV-rP-a0x"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiery Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfq-BU-n1m">
-                                <rect key="frame" x="20" y="278.5" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6q-DY-RT8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkZ-Ej-NbT">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-cd-bQx" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XXXX XXXX XXXX XXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbZ-H6-O0E" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="74" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiery Month:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejy-Yy-WET">
+                                                <rect key="frame" x="20" y="134.5" width="115" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4w3-xQ-OQn" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
+                                                <rect key="frame" x="341" y="128" width="52.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-cK-PbS" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
+                                                <rect key="frame" x="326" y="182" width="68" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiery Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfq-BU-n1m">
+                                                <rect key="frame" x="20" y="188.5" width="100" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="฿" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7M-Gt-mI3">
+                                                <rect key="frame" x="20" y="241" width="12.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount in THB" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-Ey-evL" customClass="CustomTextField" customModule="CharityDonationApp" customModuleProvider="target">
+                                                <rect key="frame" x="42.5" y="236" width="351.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH7-Te-Z8f">
+                                                <rect key="frame" x="20" y="290" width="374" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="BGL-5i-kmf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="DONATE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="donate:" destination="foB-Hm-M24" eventType="touchUpInside" id="yLV-rP-a0x"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Ejy-Yy-WET" firstAttribute="leading" secondItem="NkZ-Ej-NbT" secondAttribute="leading" constant="20" id="0g7-Kh-bgQ"/>
+                                            <constraint firstItem="Ejy-Yy-WET" firstAttribute="centerY" secondItem="4w3-xQ-OQn" secondAttribute="centerY" id="1QZ-44-T38"/>
+                                            <constraint firstItem="aH7-Te-Z8f" firstAttribute="top" secondItem="IB3-Ey-evL" secondAttribute="bottom" constant="20" id="1XC-Ms-PQ1"/>
+                                            <constraint firstAttribute="trailing" secondItem="7g6-cK-PbS" secondAttribute="trailing" constant="20" id="1tT-yU-hkd"/>
+                                            <constraint firstItem="aH7-Te-Z8f" firstAttribute="leading" secondItem="NkZ-Ej-NbT" secondAttribute="leading" constant="20" id="6jT-i3-MmU"/>
+                                            <constraint firstItem="wfq-BU-n1m" firstAttribute="centerY" secondItem="7g6-cK-PbS" secondAttribute="centerY" id="7wD-OB-ogT"/>
+                                            <constraint firstItem="ZbZ-H6-O0E" firstAttribute="top" secondItem="cnb-cd-bQx" secondAttribute="bottom" constant="20" id="8hZ-iw-LVF"/>
+                                            <constraint firstItem="R7M-Gt-mI3" firstAttribute="centerY" secondItem="IB3-Ey-evL" secondAttribute="centerY" id="98q-8K-Rxm"/>
+                                            <constraint firstAttribute="trailing" secondItem="IB3-Ey-evL" secondAttribute="trailing" constant="20" id="D37-TU-zHJ"/>
+                                            <constraint firstItem="7g6-cK-PbS" firstAttribute="top" secondItem="4w3-xQ-OQn" secondAttribute="bottom" constant="20" id="E0o-Og-0cp"/>
+                                            <constraint firstItem="R7M-Gt-mI3" firstAttribute="leading" secondItem="NkZ-Ej-NbT" secondAttribute="leading" constant="20" id="FEq-md-jt2"/>
+                                            <constraint firstAttribute="trailing" secondItem="cnb-cd-bQx" secondAttribute="trailing" constant="20" id="HFl-r8-9Ac"/>
+                                            <constraint firstItem="4w3-xQ-OQn" firstAttribute="top" secondItem="ZbZ-H6-O0E" secondAttribute="bottom" constant="20" id="JRD-Xw-dzp"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZbZ-H6-O0E" secondAttribute="trailing" constant="20" id="LAB-An-JQV"/>
+                                            <constraint firstItem="ZbZ-H6-O0E" firstAttribute="leading" secondItem="NkZ-Ej-NbT" secondAttribute="leading" constant="20" id="SCJ-vO-g4Y"/>
+                                            <constraint firstItem="IB3-Ey-evL" firstAttribute="top" secondItem="7g6-cK-PbS" secondAttribute="bottom" constant="20" id="SJW-nJ-dob"/>
+                                            <constraint firstAttribute="trailing" secondItem="aH7-Te-Z8f" secondAttribute="trailing" constant="20" id="SZY-UB-P7b"/>
+                                            <constraint firstItem="IB3-Ey-evL" firstAttribute="leading" secondItem="R7M-Gt-mI3" secondAttribute="trailing" constant="10" id="URO-Hd-qOc"/>
+                                            <constraint firstItem="ZbZ-H6-O0E" firstAttribute="top" secondItem="cnb-cd-bQx" secondAttribute="bottom" constant="20" id="aGj-Bk-Qdk"/>
+                                            <constraint firstAttribute="trailing" secondItem="4w3-xQ-OQn" secondAttribute="trailing" constant="20.5" id="c6X-cC-7zT"/>
+                                            <constraint firstAttribute="height" priority="250" constant="774" id="dao-uB-jWM"/>
+                                            <constraint firstItem="wfq-BU-n1m" firstAttribute="leading" secondItem="NkZ-Ej-NbT" secondAttribute="leading" constant="20" id="iKX-nz-VSU"/>
+                                            <constraint firstItem="cnb-cd-bQx" firstAttribute="top" secondItem="NkZ-Ej-NbT" secondAttribute="top" constant="20" id="o0s-c1-mzg"/>
+                                            <constraint firstItem="cnb-cd-bQx" firstAttribute="leading" secondItem="NkZ-Ej-NbT" secondAttribute="leading" constant="20" id="tWR-Jl-yEe"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aH7-Te-Z8f" secondAttribute="bottom" constant="30" id="ybm-Nb-SdN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NkZ-Ej-NbT" firstAttribute="leading" secondItem="7ty-Ef-5zI" secondAttribute="trailing" id="3HG-0I-KKO"/>
+                                    <constraint firstItem="NkZ-Ej-NbT" firstAttribute="bottom" secondItem="7ty-Ef-5zI" secondAttribute="bottom" id="SGx-oJ-Gvk"/>
+                                    <constraint firstItem="NkZ-Ej-NbT" firstAttribute="leading" secondItem="7ty-Ef-5zI" secondAttribute="leading" id="Yg1-dR-QT9"/>
+                                    <constraint firstItem="NkZ-Ej-NbT" firstAttribute="top" secondItem="7ty-Ef-5zI" secondAttribute="top" id="de8-N0-khl"/>
+                                    <constraint firstItem="NkZ-Ej-NbT" firstAttribute="trailing" secondItem="7ty-Ef-5zI" secondAttribute="trailing" constant="414" id="iJ4-tK-ZWo"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7ty-Ef-5zI"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="HMi-HE-Fix"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="7g6-cK-PbS" firstAttribute="top" secondItem="4w3-xQ-OQn" secondAttribute="bottom" constant="15" id="3IP-I8-8jn"/>
-                            <constraint firstItem="ZbZ-H6-O0E" firstAttribute="top" secondItem="cnb-cd-bQx" secondAttribute="bottom" constant="24" id="50V-at-3cC"/>
-                            <constraint firstItem="R7M-Gt-mI3" firstAttribute="leading" secondItem="wGC-v5-pGa" secondAttribute="leading" constant="8" id="Aui-eq-n6b"/>
-                            <constraint firstItem="wGC-v5-pGa" firstAttribute="trailing" secondItem="7g6-cK-PbS" secondAttribute="trailing" constant="20" id="G0H-yQ-VFA"/>
-                            <constraint firstItem="ZbZ-H6-O0E" firstAttribute="leading" secondItem="wGC-v5-pGa" secondAttribute="leading" constant="20" id="GhL-fe-EeL"/>
-                            <constraint firstItem="wfq-BU-n1m" firstAttribute="centerY" secondItem="7g6-cK-PbS" secondAttribute="centerY" id="JHK-7y-03I"/>
-                            <constraint firstItem="wGC-v5-pGa" firstAttribute="trailing" secondItem="aH7-Te-Z8f" secondAttribute="trailing" constant="20" id="KS0-D0-rLy"/>
-                            <constraint firstItem="IB3-Ey-evL" firstAttribute="leading" secondItem="R7M-Gt-mI3" secondAttribute="trailing" id="MIb-M6-Y0h"/>
-                            <constraint firstItem="aH7-Te-Z8f" firstAttribute="top" secondItem="IB3-Ey-evL" secondAttribute="bottom" constant="27" id="MrG-oM-cEn"/>
-                            <constraint firstItem="4w3-xQ-OQn" firstAttribute="top" secondItem="ZbZ-H6-O0E" secondAttribute="bottom" constant="13" id="Q8Z-4y-NBu"/>
-                            <constraint firstItem="R7M-Gt-mI3" firstAttribute="centerY" secondItem="IB3-Ey-evL" secondAttribute="centerY" id="RIi-1Q-43S"/>
-                            <constraint firstItem="wGC-v5-pGa" firstAttribute="trailing" secondItem="cnb-cd-bQx" secondAttribute="trailing" constant="20" id="WGR-eG-uC4"/>
-                            <constraint firstItem="IB3-Ey-evL" firstAttribute="top" secondItem="7g6-cK-PbS" secondAttribute="bottom" constant="20" id="XrC-e4-RMt"/>
-                            <constraint firstItem="wGC-v5-pGa" firstAttribute="trailing" secondItem="ZbZ-H6-O0E" secondAttribute="trailing" constant="20" id="Z49-hL-R3X"/>
-                            <constraint firstItem="wGC-v5-pGa" firstAttribute="trailing" secondItem="4w3-xQ-OQn" secondAttribute="trailing" constant="20" id="bBi-6f-1SV"/>
-                            <constraint firstItem="cnb-cd-bQx" firstAttribute="top" secondItem="wGC-v5-pGa" secondAttribute="top" constant="30" id="lBf-CE-OfE"/>
-                            <constraint firstItem="wGC-v5-pGa" firstAttribute="trailing" secondItem="IB3-Ey-evL" secondAttribute="trailing" constant="20" id="nEO-HH-5ag"/>
-                            <constraint firstItem="IB3-Ey-evL" firstAttribute="leading" secondItem="wGC-v5-pGa" secondAttribute="leading" constant="50" id="ovG-Pd-hg7"/>
-                            <constraint firstItem="wfq-BU-n1m" firstAttribute="leading" secondItem="wGC-v5-pGa" secondAttribute="leading" constant="20" id="q5x-cz-nei"/>
-                            <constraint firstItem="Ejy-Yy-WET" firstAttribute="top" secondItem="ZbZ-H6-O0E" secondAttribute="bottom" constant="20" id="s4C-E5-xMf"/>
-                            <constraint firstItem="aH7-Te-Z8f" firstAttribute="leading" secondItem="wGC-v5-pGa" secondAttribute="leading" constant="20" id="wQy-NO-ixx"/>
-                            <constraint firstItem="Ejy-Yy-WET" firstAttribute="leading" secondItem="wGC-v5-pGa" secondAttribute="leading" constant="20" id="x6g-R6-Q2V"/>
-                            <constraint firstItem="cnb-cd-bQx" firstAttribute="leading" secondItem="wGC-v5-pGa" secondAttribute="leading" constant="20" id="yjU-sF-VbS"/>
+                            <constraint firstItem="NkZ-Ej-NbT" firstAttribute="width" secondItem="wGC-v5-pGa" secondAttribute="width" id="BMb-n2-Kku"/>
+                            <constraint firstItem="e6q-DY-RT8" firstAttribute="leading" secondItem="wGC-v5-pGa" secondAttribute="leading" id="Lph-mc-7Qn"/>
+                            <constraint firstItem="e6q-DY-RT8" firstAttribute="trailing" secondItem="wGC-v5-pGa" secondAttribute="trailing" id="tdj-z0-JZX"/>
+                            <constraint firstItem="e6q-DY-RT8" firstAttribute="top" secondItem="wGC-v5-pGa" secondAttribute="top" id="xbX-Qp-k4N"/>
+                            <constraint firstItem="e6q-DY-RT8" firstAttribute="bottom" secondItem="wGC-v5-pGa" secondAttribute="bottom" id="ygd-lk-utJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wGC-v5-pGa"/>
                     </view>
@@ -152,6 +196,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="cardHolderNameTextField" destination="cnb-cd-bQx" id="pUr-zc-SCt"/>
                         <outlet property="cardNumberTextField" destination="ZbZ-H6-O0E" id="UAi-0j-rl3"/>
@@ -162,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1JD-TY-iND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="62"/>
+            <point key="canvasLocation" x="-294.20289855072468" y="61.607142857142854"/>
         </scene>
         <!--Successfull Transaction View Controller-->
         <scene sceneID="uCA-gp-TnQ">
@@ -173,13 +218,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction is Successfull. Thanks for the donation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x7-fY-h9F">
-                                <rect key="frame" x="40" y="573" width="334" height="42.5"/>
+                                <rect key="frame" x="40" y="482.5" width="334" height="42.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TransactionSuccess" translatesAutoresizingMaskIntoConstraints="NO" id="xL9-es-blY">
-                                <rect key="frame" x="107" y="353" width="200" height="200"/>
+                                <rect key="frame" x="107" y="262.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="bvn-rE-BVa"/>
                                     <constraint firstAttribute="height" constant="200" id="rvZ-Jl-vPj"/>
@@ -209,7 +254,7 @@
                             <constraint firstItem="pKQ-5i-tEU" firstAttribute="leading" secondItem="9J8-AU-XGF" secondAttribute="leading" constant="40" id="RaA-0f-bPr"/>
                             <constraint firstItem="4x7-fY-h9F" firstAttribute="centerX" secondItem="xL9-es-blY" secondAttribute="centerX" id="UsW-6O-r1a"/>
                             <constraint firstItem="9J8-AU-XGF" firstAttribute="trailing" secondItem="4x7-fY-h9F" secondAttribute="trailing" constant="40" id="ZXi-GM-00r"/>
-                            <constraint firstItem="xL9-es-blY" firstAttribute="centerY" secondItem="9J8-AU-XGF" secondAttribute="centerY" id="hUs-tS-mLB"/>
+                            <constraint firstItem="xL9-es-blY" firstAttribute="centerY" secondItem="9J8-AU-XGF" secondAttribute="centerY" multiplier="0.8" id="hUs-tS-mLB"/>
                             <constraint firstItem="9J8-AU-XGF" firstAttribute="trailing" secondItem="pKQ-5i-tEU" secondAttribute="trailing" constant="40" id="x4B-Fr-yKl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9J8-AU-XGF"/>

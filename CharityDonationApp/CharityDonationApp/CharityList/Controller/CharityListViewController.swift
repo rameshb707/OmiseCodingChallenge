@@ -15,13 +15,15 @@ class CharityListViewController: UIViewController {
     
     // MARK:- Outlets
     @IBOutlet weak var charityListTableView: UITableView!
-    
+        
     // MARK:- Properties
     var charityList: [Charity] = [] {
         didSet {
             charityListTableView?.reloadData()
         }
     }
+    
+    var activityIndicator: UIActivityIndicatorView?
     
     /// ViewModal property
     var viewModal: CharityViewModal!
@@ -38,6 +40,9 @@ class CharityListViewController: UIViewController {
         
         /// Getting the charity list to load in tableview
         viewModal.getCharityList()
+        
+        /// Adds activity indicator while fetching charity list
+        activityIndicator = self.showActivityIndicatory(uiView: self.view)
     }
     
 }
@@ -97,13 +102,16 @@ extension CharityListViewController: CharityViewModalDelegate {
     
     func charityList(_ list: [Charity]) {
         self.charityList = list
+        activityIndicator?.stopAnimating()
     }
     
     func networkConnectionError() {
+        activityIndicator?.stopAnimating()
         self.alertView(NETWORK_CONNECTION_FAIL_TITLE, description: NETWORK_CONNECTION_FAIL_DESCRIPTION)
     }
     
     func charityListError(_ title: String, description message: String) {
+         activityIndicator?.stopAnimating()
          self.alertView(title, description: message)
     }
 }
