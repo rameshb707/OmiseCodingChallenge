@@ -82,6 +82,7 @@ class CharityDonationViewController: UIViewController,UITextFieldDelegate, TextD
     }
     
     @IBAction func onTapDismiss(_ sender: Any) {
+        self.view.endEditing(true)
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
