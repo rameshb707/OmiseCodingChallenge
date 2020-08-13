@@ -16,10 +16,15 @@ class CharityListViewController: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var charityListTableView: UITableView!
         
+
     // MARK:- Properties
     var charityList: [Charity] = [] {
         didSet {
-            charityListTableView?.reloadData()
+            if !charityList.isEmpty {
+                charityListTableView?.reloadData()
+            } else {
+                self.alertView(EMPTY_CHARITY_LIST, description: EMPTY_CHARITY_LIST_ESCRIPTION)
+            }
         }
     }
     
@@ -32,8 +37,8 @@ class CharityListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /// Registering the custom tableview cell
-        registerTableViewCell()
+        /// Basic Setup
+        setUpView()
         
         /// ViewModal Object with CharityListViewController confirming through initializer
         viewModal = CharityViewModal(delegate: self)
@@ -45,11 +50,34 @@ class CharityListViewController: UIViewController {
         activityIndicator = self.showActivityIndicatory(uiView: self.view)
     }
     
+
+    
 }
 
 extension CharityListViewController {
     private func registerTableViewCell() {
         self.charityListTableView?.register(UINib(nibName: CharityTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: CharityTableViewCell.identifier)
+    }
+    
+    private func setUpView() {
+        
+        /// Registering the custom tableview cell
+        registerTableViewCell()
+        
+        /// Adding UIRefreshControl to the tableview
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+
+        // this is the replacement of implementing: "collectionView.addSubview(refreshControl)"
+        charityListTableView.refreshControl = refreshControl
+    }
+    
+    @objc func refreshTableView(refreshControl: UIRefreshControl) {
+        /// Getting the charity list to load in tableview
+        viewModal.getCharityList()
+        activityIndicator?.startAnimating()
+        // somewhere in your code you might need to call:
+        refreshControl.endRefreshing()
     }
 }
 
@@ -65,15 +93,16 @@ extension CharityListViewController: UITableViewDataSource {
                 cell.charitylogoImageView?.image = UIImage(data: imageData)
                 cell.layoutSubviews()
         })
-        cell.charityNameLabel.text = charityList[indexPath.row].name
+        cell.charityNameLabel.text = charityList[indexPath.row].name 
         return cell
     }
 }
 
 // MARK: Table View Delegate
 extension CharityListViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CharityCell_Height_Constant
+        return 350
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

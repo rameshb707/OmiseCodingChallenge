@@ -17,13 +17,17 @@ class CharityTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
+        self.contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16))
         self.contentView.backgroundColor = .white
         self.contentView.layer.masksToBounds = false
         self.contentView.layer.cornerRadius = 8.0
         self.contentView.layer.shadowRadius = 5
         self.contentView.layer.shadowOffset = .zero
         self.contentView.layer.shadowOpacity = 0.3
+        
+        charitylogoImageView.layer.cornerRadius = charitylogoImageView.frame.size.width/2
+        charitylogoImageView.layer.borderColor = UIColor.systemGreen.cgColor
+        charitylogoImageView.layer.borderWidth = 1
     }
 
 }

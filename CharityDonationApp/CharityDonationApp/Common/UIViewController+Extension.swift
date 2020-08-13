@@ -35,7 +35,7 @@ extension UIViewController {
         activityIndicator.center = uiView.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.style = .large
-        activityIndicator.color = UIColor.systemGreen
+        activityIndicator.color = UIColor(red: 29.0/255.0, green: 84.0/255.0, blue: 229.0/255.0, alpha: 1.0)
         uiView.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         return activityIndicator

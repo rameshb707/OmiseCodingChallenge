@@ -20,6 +20,7 @@ class CharityDonationViewController: UIViewController,UITextFieldDelegate, TextD
     @IBOutlet weak var expiryMonthTextField: CustomTextField!
     @IBOutlet weak var expiryYearTextField: CustomTextField!
     @IBOutlet weak var donationAmountTextField: CustomTextField!
+    @IBOutlet weak var donateButton: UIButton!
     
     // MARK: Properties
     var viewModal: CharityDonationViewModal?
@@ -62,13 +63,13 @@ class CharityDonationViewController: UIViewController,UITextFieldDelegate, TextD
         
         donationAmountTextField.delegate = self
         donationAmountTextField.delegateCimbTextField = self
-        donationAmountTextField.setNumberFormatting(formattingPattern: "#,###,###")
-        
+         
+        donateButton.layer.cornerRadius = 8
     }
     
     // MARK: Actions
     @IBAction func donate(_ sender: Any) {
-        if (cardHolderNameTextField.getText(bWithOutFormat: false).count > 0) || (cardNumberTextField.getText().count == CARD_NUMBER_COUNT) || (expiryMonthTextField.getText().count > 0)  || (expiryYearTextField.getText().count == CARD_EXPIRY_YEAR) || (donationAmountTextField.getText().count > 0 ) {
+        if (cardHolderNameTextField.getText(bWithOutFormat: false).count > 0) && (cardNumberTextField.getText().count == CARD_NUMBER_COUNT) && (expiryMonthTextField.getText().count > 0)  && (expiryYearTextField.getText().count == CARD_EXPIRY_YEAR) {
             activityIndicator?.startAnimating()
 
             let cardModal = CardNumberModel(cardHolderName: cardHolderNameTextField.getText(bWithOutFormat: false), cardNumber: cardNumberTextField.getText(), expiryMonth: expiryMonthTextField.getText(), expiryYear: expiryYearTextField.getText(), donationAmount: donationAmountTextField.getText())

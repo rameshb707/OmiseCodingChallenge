@@ -27,13 +27,15 @@
 		4C4B86CA24E2D6E400A63B27 /* HttpValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B86C924E2D6E400A63B27 /* HttpValidation.swift */; };
 		4C4B86CC24E39F0500A63B27 /* CharityListViewModalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B86CB24E39F0500A63B27 /* CharityListViewModalTest.swift */; };
 		4C4B86CE24E3B2F600A63B27 /* CharityDonactionViewModalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B86CD24E3B2F600A63B27 /* CharityDonactionViewModalTest.swift */; };
+		4C4B86D024E4C2CC00A63B27 /* CharityListUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B86CF24E4C2CC00A63B27 /* CharityListUITest.swift */; };
+		4C4B86D224E4DAC400A63B27 /* XCTestCase+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B86D124E4DAC400A63B27 /* XCTestCase+extension.swift */; };
+		4C4B86D424E4DAFB00A63B27 /* CharityDonationUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B86D324E4DAFB00A63B27 /* CharityDonationUITest.swift */; };
 		4C60FF8F24DE644C00F3BD9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FF8E24DE644C00F3BD9F /* AppDelegate.swift */; };
 		4C60FF9124DE644C00F3BD9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FF9024DE644C00F3BD9F /* SceneDelegate.swift */; };
 		4C60FF9324DE644C00F3BD9F /* CharityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FF9224DE644C00F3BD9F /* CharityListViewController.swift */; };
 		4C60FF9624DE644C00F3BD9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60FF9424DE644C00F3BD9F /* Main.storyboard */; };
 		4C60FF9824DE645900F3BD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C60FF9724DE645900F3BD9F /* Assets.xcassets */; };
 		4C60FF9B24DE645900F3BD9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60FF9924DE645900F3BD9F /* LaunchScreen.storyboard */; };
-		4C60FFB124DE645A00F3BD9F /* CharityDonationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFB024DE645A00F3BD9F /* CharityDonationAppUITests.swift */; };
 		4C60FFC024DE769800F3BD9F /* CharityViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFBF24DE769800F3BD9F /* CharityViewModal.swift */; };
 		4C60FFC624DE776D00F3BD9F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFC224DE776D00F3BD9F /* NetworkManager.swift */; };
 		4C60FFC724DE776D00F3BD9F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60FFC324DE776D00F3BD9F /* Request.swift */; };
@@ -82,6 +84,9 @@
 		4C4B86C924E2D6E400A63B27 /* HttpValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpValidation.swift; sourceTree = "<group>"; };
 		4C4B86CB24E39F0500A63B27 /* CharityListViewModalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityListViewModalTest.swift; sourceTree = "<group>"; };
 		4C4B86CD24E3B2F600A63B27 /* CharityDonactionViewModalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityDonactionViewModalTest.swift; sourceTree = "<group>"; };
+		4C4B86CF24E4C2CC00A63B27 /* CharityListUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityListUITest.swift; sourceTree = "<group>"; };
+		4C4B86D124E4DAC400A63B27 /* XCTestCase+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extension.swift"; sourceTree = "<group>"; };
+		4C4B86D324E4DAFB00A63B27 /* CharityDonationUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityDonationUITest.swift; sourceTree = "<group>"; };
 		4C60FF8B24DE644C00F3BD9F /* CharityDonationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharityDonationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60FF8E24DE644C00F3BD9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C60FF9024DE644C00F3BD9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +98,6 @@
 		4C60FFA124DE645A00F3BD9F /* CharityDonationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharityDonationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60FFA724DE645A00F3BD9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C60FFAC24DE645A00F3BD9F /* CharityDonationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharityDonationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C60FFB024DE645A00F3BD9F /* CharityDonationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityDonationAppUITests.swift; sourceTree = "<group>"; };
 		4C60FFB224DE645A00F3BD9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C60FFBF24DE769800F3BD9F /* CharityViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityViewModal.swift; sourceTree = "<group>"; };
 		4C60FFC224DE776D00F3BD9F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -277,8 +281,10 @@
 		4C60FFAF24DE645A00F3BD9F /* CharityDonationAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4C60FFB024DE645A00F3BD9F /* CharityDonationAppUITests.swift */,
 				4C60FFB224DE645A00F3BD9F /* Info.plist */,
+				4C4B86CF24E4C2CC00A63B27 /* CharityListUITest.swift */,
+				4C4B86D124E4DAC400A63B27 /* XCTestCase+extension.swift */,
+				4C4B86D324E4DAFB00A63B27 /* CharityDonationUITest.swift */,
 			);
 			path = CharityDonationAppUITests;
 			sourceTree = "<group>";
@@ -607,7 +613,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C60FFB124DE645A00F3BD9F /* CharityDonationAppUITests.swift in Sources */,
+				4C4B86D424E4DAFB00A63B27 /* CharityDonationUITest.swift in Sources */,
+				4C4B86D224E4DAC400A63B27 /* XCTestCase+extension.swift in Sources */,
+				4C4B86D024E4C2CC00A63B27 /* CharityListUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,7 +784,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.restaurant.CharityDonationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.CharityDonationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -799,7 +807,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.restaurant.CharityDonationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramesh.CharityDonationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

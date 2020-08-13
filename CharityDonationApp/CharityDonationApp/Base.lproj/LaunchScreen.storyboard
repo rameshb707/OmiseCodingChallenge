@@ -21,10 +21,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Omise Logo" translatesAutoresizingMaskIntoConstraints="NO" id="QpC-9V-n5O">
+                                <rect key="frame" x="87" y="264" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="tur-Yb-Ce6"/>
+                                    <constraint firstAttribute="height" constant="128" id="zpK-nn-vcE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="TOb-dL-ha7" firstAttribute="top" secondItem="QpC-9V-n5O" secondAttribute="bottom" constant="39.5" id="VuY-Po-Dnk"/>
                             <constraint firstItem="TOb-dL-ha7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cNC-GZ-V92"/>
+                            <constraint firstItem="QpC-9V-n5O" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nVp-1E-FUl"/>
                             <constraint firstItem="TOb-dL-ha7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="oT3-Va-tF4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -35,4 +44,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Omise Logo" width="400" height="400"/>
+    </resources>
 </document>
